@@ -1,6 +1,6 @@
 # 🍽️ Cereal Nutritional Visualizer
 
-This is a web-based interactive visualization system built using "D3.js" that explores the "nutritional profile of breakfast cereals". The project is part of the Information Visualization coursework and demonstrates multiple coordinated visualizations and interactions.
+This is a web-based interactive visualization system built using "D3.js" that explores the "nutritional profile of breakfast cereals". The project is part of the **Information Visualization coursework** and demonstrates multiple coordinated visualizations and interactions.
 
 ## 🔍 Overview
 
