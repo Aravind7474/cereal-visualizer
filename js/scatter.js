@@ -1,5 +1,4 @@
 
-alert("🎯 scatter.js is running!");
 const margin = { top: 40, right: 40, bottom: 60, left: 60 };
 const width = 600 - margin.left - margin.right;
 const height = 400 - margin.top - margin.bottom;

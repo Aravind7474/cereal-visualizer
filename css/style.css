@@ -9,4 +9,48 @@
     pointer-events: none;
     box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
   }
+
+  #parallelPlot path:hover {
+    stroke: orange;
+    stroke-width: 2;
+  }
+
+  #scatterPlot {
+    margin-bottom: 50px;
+  }
+  
+  #parallelPlot {
+    margin-bottom: 50px;
+  }
+
+  #scatterPlot svg {
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  #parallelPlot svg {
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  #scatterPlot {
+    margin-bottom: 60px;
+    width: 650px;
+  }
+  
+  #parallelPlot {
+    width: 1000px;
+  }
+
+  .tooltip {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 13px;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  
   
