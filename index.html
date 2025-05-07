@@ -2,27 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scatter Plot</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Cereal Visualization Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    window.colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+    d3.csv("data/a1-cereals.csv").then(data => {
+      const brands = [...new Set(data.map(d => d.Manufacturer))];
+      window.colorScale.domain(brands);
+    });
+  </script>
 </head>
 <body>
-  <h1>Scatter Plot: Sugar vs. Fiber</h1>
+
+  <div class="banner">
+    <h1>Cereal Visualization Dashboard</h1>
+    <p>Team: VizWizards | Dataset: Cereal Nutrition</p>
+  </div>
+
+  <div id="scatterControls">
+    <label for="xAxisSelect">X Axis:</label>
+    <select id="xAxisSelect">
+      <option value="Sugars">Sugars</option>
+      <option value="Fiber">Fiber</option>
+      <option value="Calories">Calories</option>
+      <option value="Protein">Protein</option>
+      <option value="Fat">Fat</option>
+      <option value="Sodium">Sodium</option>
+      <option value="Carbohydrates">Carbohydrates</option>
+    </select>
+
+    <label for="yAxisSelect">Y Axis:</label>
+    <select id="yAxisSelect">
+      <option value="Fiber">Fiber</option>
+      <option value="Sugars">Sugars</option>
+      <option value="Calories">Calories</option>
+      <option value="Protein">Protein</option>
+      <option value="Fat">Fat</option>
+      <option value="Sodium">Sodium</option>
+      <option value="Carbohydrates">Carbohydrates</option>
+    </select>
+
+    <button id="resetScatter">Reset Scatter</button>
+  </div>
+
   <div id="scatterPlot"></div>
 
-  <!-- ✔ This must match your folder exactly -->
-  <script src="js/scatter.js"></script>
-
-  <h2>Parallel Coordinates: Nutrient Profiles</h2>
+  <button id="resetParallel">Reset Parallel</button>
   <div id="parallelPlot"></div>
-  <script src="js/parallel.js"></script>
 
-  <h2>Average Calories by Brand</h2>
+  <button id="resetBar">Reset Bar</button>
   <div id="brandChart"></div>
 
+  <script src="js/scatter.js"></script>
+  <script src="js/parallel.js"></script>
   <script src="js/barchart.js"></script>
-
-
 
 </body>
 </html>
